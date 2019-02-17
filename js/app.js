@@ -1,22 +1,12 @@
-// metodos o funcuones en un objeto
-// const persona={
-//     nombre:'Carlos',
-//     trabajo:'desarrollador web',
-//     edad:'300',
-//     musicaRock:true,
-//     mostrarInformacion:function(){
-//         console.log(`${this.nombre} es ${this.trabajo} y su edad es ${this.edad}`)
-//     }
-// }
-
-//nueva forma
 const persona={
-    nombre:'Carlos',
-    trabajo:'desarrollador web',
-    edad:'300',
-    musicaRock:true,
-    mostrarInformacion(){
-        console.log(`${this.nombre} es ${this.trabajo} y su edad es ${this.edad}`)
-    }
+    nombre:'carlos',
+    profesion:'Programador',
+    edad:'50'
 }
-persona.mostrarInformacion()
+const persona2={
+    nombre:'fernando',
+    profesion:'tester',
+    edad:'200'
+}
+console.log(persona);
+console.log(persona2);
