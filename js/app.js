@@ -10,5 +10,6 @@ const canciones=["people are strange","the end","the crystal"]
 //     canciones:canciones
 // }
 
+//nueva forma
 const thedoors={band,genero,canciones}
 console.log(thedoors);
