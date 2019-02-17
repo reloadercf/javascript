@@ -1,30 +1,38 @@
-//Areglos y map
+//sprear operator
+//nos permite combina dos arreglos
 
-// const carrito=['producto 1','producto 2','producto 3']
-// console.log(carrito);
+// let lenguajes=['JavaScript','php','python'];
+// let frameworks=['Angular','laravel','django'];
 
-// const appContenedor = document.querySelector('#app')
+//unir los arreglos en uno solo de la forma anterior
+// let combinacion=lenguajes.concat(frameworks);
+// console.log(combinacion)
 
-// let html ='';
-// //iteracion el el codiog de producto con foreach
-// carrito.forEach(producto=>{
-//     html+=`<li>${producto}</li>`;
-// })
-// appContenedor.innerHTML=html;
 
-//la idea del map es que concerva el arreglo original y devuelve un nuevo arreglo
-                    // carrito=['producto 1','producto 2','producto 3']
+//la nueva forma con es6
+// let nuevoarreglo=[...lenguajes,...frameworks];
+// console.log(nuevoarreglo)
 
-                    // carrito.map(producto=>{
-                    //     return 'El producto es '+ producto;
-                    // })
+//nos volteo nuestro arreglo
+// let [ultimo]=lenguajes.reverse();
+// console.log(ultimo);
+// console.log(lenguajes);
 
-//objects keys
 
-const persona={
-    nombre:'carlos',
-    profesion:'programador',
-    edad:500
+//con spreed
+// let [ultimoSpreed]=[...lenguajes].reverse();
+// console.log(ultimoSpreed);
+// console.log(lenguajes);
+
+
+
+
+
+
+//otra funcion del spreed
+
+function suma(a,b,c){
+    console.log(a+b+c);
 }
-
-console.log(Object.keys(persona));
+const numeros = [1,2,3];
+suma(...numeros);
