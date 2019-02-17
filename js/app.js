@@ -1,15 +1,22 @@
-//object literal enhancement
-
-const band="the doors"
-const genero="rock"
-const canciones=["people are strange","the end","the crystal"]
-
-// const thedoors={
-//     banda:band,
-//     genero:genero,
-//     canciones:canciones
+// metodos o funcuones en un objeto
+// const persona={
+//     nombre:'Carlos',
+//     trabajo:'desarrollador web',
+//     edad:'300',
+//     musicaRock:true,
+//     mostrarInformacion:function(){
+//         console.log(`${this.nombre} es ${this.trabajo} y su edad es ${this.edad}`)
+//     }
 // }
 
 //nueva forma
-const thedoors={band,genero,canciones}
-console.log(thedoors);
+const persona={
+    nombre:'Carlos',
+    trabajo:'desarrollador web',
+    edad:'300',
+    musicaRock:true,
+    mostrarInformacion(){
+        console.log(`${this.nombre} es ${this.trabajo} y su edad es ${this.edad}`)
+    }
+}
+persona.mostrarInformacion()
