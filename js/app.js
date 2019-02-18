@@ -1,38 +1,34 @@
-//sprear operator
-//nos permite combina dos arreglos
+//los arreglos llevan corrchetes
+const personas=[
+    {nombre:'carlos', edad:27, aprendiendo:'javascript'},
+    {nombre:'luis', edad:28, aprendiendo:'java'},
+    {nombre:'fernando', edad:30, aprendiendo:'python'},
+    {nombre:'enrrique', edad:23, aprendiendo:'angular'},
+    {nombre:'el chavo', edad:20, aprendiendo:'php'},
+]
+console.log(personas);
 
-// let lenguajes=['JavaScript','php','python'];
-// let frameworks=['Angular','laravel','django'];
+//mayores a 28
+const mayores=personas.filter(persona=>{
+    return persona.edad>28;
+})
+// console.log(mayores);
 
-//unir los arreglos en uno solo de la forma anterior
-// let combinacion=lenguajes.concat(frameworks);
-// console.log(combinacion)
+//que aprende fernando y su edad
 
+const fernando=personas.find(persona=>{
+    return persona.nombre==='fernando';
+});
+// console.log(`Fernando esta aprendiendo ${fernando.aprendiendo}`);
 
-//la nueva forma con es6
-// let nuevoarreglo=[...lenguajes,...frameworks];
-// console.log(nuevoarreglo)
+//reduce nos hace la sumatoria
+let total = personas.reduce((edadTotal,persona)=>{
+    return edadTotal+persona.edad;
+},0);
 
-//nos volteo nuestro arreglo
-// let [ultimo]=lenguajes.reverse();
-// console.log(ultimo);
-// console.log(lenguajes);
-
-
-//con spreed
-// let [ultimoSpreed]=[...lenguajes].reverse();
-// console.log(ultimoSpreed);
-// console.log(lenguajes);
+//suma las edades
+console.log(total);
 
 
-
-
-
-
-//otra funcion del spreed
-
-function suma(a,b,c){
-    console.log(a+b+c);
-}
-const numeros = [1,2,3];
-suma(...numeros);
+//cuenta los registros
+console.log(personas.length);
