@@ -22,8 +22,21 @@ const descargarUsuarios = cantidad =>new Promise((resolve,reject)=>{
 
 descargarUsuarios(30)
 .then(
-        miembros=> console.log(miembros),
+        miembros=> imprimirHtml(miembros),
         error=>console.error(new Error('hubo un error'+error)
         )
     
 )
+function imprimirHtml(usuarios){
+    let html='';
+    usuarios.forEach(usuario => {
+        html +=`
+        <li>Nombre: ${usuario.name.first} ${usuario.name.last}
+            Pais: ${usuario.nat}
+            Imagen: <img src="${usuario.picture.medium}">
+        </li>
+        `
+    });
+    const contenedorApp = document.querySelector('#app')
+    contenedorApp.innerHTML=html;
+}
