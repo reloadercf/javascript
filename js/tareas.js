@@ -1,11 +1,21 @@
-const nombreTarea = 'pasear al perro';
+export const nombreTarea = 'pasear al perro';
 // export default nombreTarea;
 
-const tarea='tarea'
-export default {
-    nombre: nombreTarea,
-    tarea:  tarea
+//exportar funciones
+export const crearTarea=(tarea,urgencia)=>{
+    return ` la tarea ${tarea} tiene una urgencia ${urgencia}`;
 }
+
+export const tareaCompletada=()=>{
+    console.log('la tarea de completo');
+}
+
+
+// const tarea='tarea'
+// export default {
+//     nombre: nombreTarea,
+//     tarea:  tarea
+// }
 
 //herencia
 class Tarea{
