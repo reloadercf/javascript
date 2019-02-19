@@ -1,10 +1,5 @@
-import {nombreTarea,crearTarea,tareaCompletada}from './tareas.js'
-//tenemos unna imprecion del primer elemento
-console.log(nombreTarea);
+import Tarea from './tareas.js'
 
-
-//usamos la funcion que importamos
-const tarea1=crearTarea('pasear al perro','urgente')
-
+const tarea1= new Tarea('usar herencia','urgente');
 console.log(tarea1);
-tareaCompletada();
+tarea1.mostrar
